@@ -14,6 +14,7 @@ public class ProductResponse {
     private Integer price;
     private String img;
     private Integer stock;
+    private Integer id;
 
     public static ProductResponse fromProduct (Product product){
         return ProductResponse.builder()
@@ -21,6 +22,7 @@ public class ProductResponse {
                 .price(product.getPrice())
                 .img(product.getImg())
                 .stock(product.getStock())
+                .id(product.getId())        
                 .build();
     }
 }
