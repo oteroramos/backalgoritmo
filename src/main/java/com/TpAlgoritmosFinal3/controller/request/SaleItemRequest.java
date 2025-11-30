@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SaleItemRequest {
-    private String product;
+    private String name;
     private Integer price;
     private Integer amount;
-    private Integer subtotal;
+    private Integer quantity;
 }
 

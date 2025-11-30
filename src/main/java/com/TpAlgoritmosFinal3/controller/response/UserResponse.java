@@ -14,13 +14,11 @@ import java.util.Optional;
 public class UserResponse {
     private String email;
     private String pass;
-    private String rol;
 
     public static UserResponse fromUser(User user){
         return UserResponse.builder()
                 .email(user.getEmail())
                 .pass(user.getPassword())
-                .rol(user.getRol())
                 .build();
     }
 

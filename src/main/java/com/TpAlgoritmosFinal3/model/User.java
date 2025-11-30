@@ -21,12 +21,23 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idUsuarios;
 
+    private String nombre;
+    private String apellido;
+    private String dni;
+    private String direccion;
+    private String nacimiento;
+    private String telefono;
     private String email;
     private String password;
-    private String rol;
 
-    public static User toUser(UserRequest userRequest){
+    public static User toUser(UserRequest userRequest) {
         return User.builder()
+                .nombre(userRequest.getNombre())
+                .apellido(userRequest.getApellido())
+                .dni(userRequest.getDni())
+                .direccion(userRequest.getDireccion())
+                .nacimiento(userRequest.getNacimiento())
+                .telefono(userRequest.getTelefono())
                 .email(userRequest.getEmail())
                 .password(userRequest.getPassword())
                 .build();

@@ -31,7 +31,6 @@ public class CashService implements CashServiceImp {
     public List<CashResponse> listCash() {
         try {
             List<Cash> cash = cashRepository.findAll() ;
-
             return cash.stream().map(CashResponse::fromCash).toList();
         } catch (Exception e) {
             throw new RuntimeException(e);

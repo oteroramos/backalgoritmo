@@ -9,4 +9,5 @@ import java.util.Optional;
 @Service
 public interface UserServiceImp {
     Optional<UserResponse> login(UserRequest userRequest);
+    Optional<UserResponse> register(UserRequest userRequest);
 }

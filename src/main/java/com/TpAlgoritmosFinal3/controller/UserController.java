@@ -22,7 +22,11 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<Optional<UserResponse >> login(@RequestBody UserRequest userRequest) {
-
         return ResponseEntity.ok(userServiceImp.login(userRequest));
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity<Optional<UserResponse>> register(@RequestBody UserRequest userRequest){
+        return ResponseEntity.ok(userServiceImp.register(userRequest));
     }
 }

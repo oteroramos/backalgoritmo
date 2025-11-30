@@ -27,10 +27,10 @@ public class SaleService implements SaleServiceImp {
 		List<SaleItem> items = saleRequest.getSaleItemRequestList().stream()
 				.map(req -> {
 					SaleItem item = new SaleItem();
-					item.setProduct(req.getProduct());
+					item.setProduct(req.getName());
 					item.setPrice(req.getPrice());
 					item.setAmount(req.getAmount());
-					item.setSubtotal(req.getSubtotal());
+					item.setSubtotal(req.getQuantity());
 					return item;
 				})
 				.toList();
