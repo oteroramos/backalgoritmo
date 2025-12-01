@@ -4,7 +4,6 @@ import com.TpAlgoritmosFinal3.controller.request.UserRequest;
 import com.TpAlgoritmosFinal3.controller.response.UserResponse;
 import com.TpAlgoritmosFinal3.service.UserServiceImp;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
